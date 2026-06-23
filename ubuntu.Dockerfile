@@ -52,14 +52,7 @@ ENV USE_SYSTEM_LIBS=ON
 ENV ENABLE_HEADLESS=OFF
 ENV DENABLE_HWDB=ON
 ENV ENABLE_EVDEV=ON
-ENV EXTRA_CMAKE_ARGS="-DUSE_SYSTEM_MINIZIP-NG=OFF -DUSE_SYSTEM_SFML=OFF -DUSE_SYSTEM_MBEDTLS=OFF -DUSE_SYSTEM_LIBMGBA=OFF -DUSE_SYSTEM_ENET=OFF -DUSE_SYSTEM_ZLIB=OFF"
-
-# SDL3 is not available for 25.04<
-RUN add-apt-repository ppa:hrzhu/sdl3-backport
-# FMT 10 is not available for 25.04
-RUN add-apt-repository ppa:trldp/libfmt
-# ENET 1.3.18 is not available for 25.04<
-# ZLIB>=1.3.1 is not available for 25.04<
+ENV EXTRA_CMAKE_ARGS="-DUSE_SYSTEM_MBEDTLS=OFF -DUSE_SYSTEM_LIBMGBA=OFF -DUSE_SYSTEM_FMT=OFF"
 
 
 RUN apt-get update && apt-get upgrade -y && apt-get install -y \
@@ -88,7 +81,8 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y \
     # SDL
     libsdl3-dev \
     # FMT
-    libfmt-dev \
+    # Ubuntu and Debian currently only ship libfmt 10.1, but Dolphin requires 11.1 or newer.
+    # libfmt-dev \
     # glslang
     glslang-dev \
     glslang-tools \
@@ -107,7 +101,7 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y \
     # zlib
     zlib1g-dev \
     # minizip-ng
-    ## Not packaged yet (Soon)
+    libminizip-ng-dev \
     # lzo
     liblzo2-dev \
     # lz4
@@ -119,8 +113,7 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y \
     # libusb
     libusb-1.0-0-dev \
     # SFML
-    ## libsfml-dev \
-    ## SFML 3.0 is not yet shipped on Ubuntu
+    libsfml-dev \
     # MiniUPNPC
     libminiupnpc-dev \
     # MbedTLS
