@@ -10,7 +10,7 @@ services:
       - ${DOLPHIN_DIR}:/dolphin
       - ./out/alpine-nodeps-gcc:/out
       - ./ccache.conf:/etc/ccache.conf
-      - /tmp/ccache-dolphin:/ccache
+      - ${CCACHE_DIR}:/ccache
 
   alpine-nodeps-clang:
     build:
@@ -23,7 +23,7 @@ services:
       - ${DOLPHIN_DIR}:/dolphin
       - ./out/alpine-nodeps-clang:/out
       - ./ccache.conf:/etc/ccache.conf
-      - /tmp/ccache-dolphin:/ccache
+      - ${CCACHE_DIR}:/ccache
 
   alpine-alldeps-gcc:
     build:
@@ -36,7 +36,7 @@ services:
       - ${DOLPHIN_DIR}:/dolphin
       - ./out/alpine-alldeps-gcc:/out
       - ./ccache.conf:/etc/ccache.conf
-      - /tmp/ccache-dolphin:/ccache
+      - ${CCACHE_DIR}:/ccache
 
   alpine-alldeps-clang:
     build:
@@ -49,7 +49,7 @@ services:
       - ${DOLPHIN_DIR}:/dolphin
       - ./out/alpine-alldeps-clang:/out
       - ./ccache.conf:/etc/ccache.conf
-      - /tmp/ccache-dolphin:/ccache
+      - ${CCACHE_DIR}:/ccache
 
   debian-alldeps-gcc:
     build:
@@ -62,7 +62,7 @@ services:
       - ${DOLPHIN_DIR}:/dolphin
       - ./out/debian-alldeps-gcc:/out
       - ./ccache.conf:/etc/ccache.conf
-      - /tmp/ccache-dolphin:/ccache
+      - ${CCACHE_DIR}:/ccache
 
   debian-nodeps-gcc:
     build:
@@ -75,7 +75,7 @@ services:
       - ${DOLPHIN_DIR}:/dolphin
       - ./out/debian-nodeps-gcc:/out
       - ./ccache.conf:/etc/ccache.conf
-      - /tmp/ccache-dolphin:/ccache
+      - ${CCACHE_DIR}:/ccache
 
   debian-alldeps-clang:
     build:
@@ -88,7 +88,7 @@ services:
       - ${DOLPHIN_DIR}:/dolphin
       - ./out/debian-alldeps-clang:/out
       - ./ccache.conf:/etc/ccache.conf
-      - /tmp/ccache-dolphin:/ccache
+      - ${CCACHE_DIR}:/ccache
 
   debian-nodeps-clang:
     build:
@@ -101,7 +101,7 @@ services:
       - ${DOLPHIN_DIR}:/dolphin
       - ./out/debian-nodeps-clang:/out
       - ./ccache.conf:/etc/ccache.conf
-      - /tmp/ccache-dolphin:/ccache
+      - ${CCACHE_DIR}:/ccache
 
   debian-alldeps-gcc-cross:
     build:
@@ -115,7 +115,7 @@ services:
       - ${DOLPHIN_DIR}:/dolphin
       - ./out/debian-alldeps-gcc-cross:/out
       - ./ccache.conf:/etc/ccache.conf
-      - /tmp/ccache-dolphin:/ccache
+      - ${CCACHE_DIR}:/ccache
 
   debian-alldeps-gcc-cross-old:
     build:
@@ -129,7 +129,7 @@ services:
       - ${DOLPHIN_DIR}:/dolphin
       - ./out/debian-alldeps-gcc-cross-old:/out
       - ./ccache.conf:/etc/ccache.conf
-      - /tmp/ccache-dolphin:/ccache
+      - ${CCACHE_DIR}:/ccache
   debian-nodeps-gcc-cross-old:
     build:
       context: .
@@ -142,7 +142,7 @@ services:
       - ${DOLPHIN_DIR}:/dolphin
       - ./out/debian-nodeps-gcc-cross-old:/out
       - ./ccache.conf:/etc/ccache.conf
-      - /tmp/ccache-dolphin:/ccache
+      - ${CCACHE_DIR}:/ccache
 
   debian-nodeps-gcc-cross:
     build:
@@ -156,7 +156,7 @@ services:
       - ${DOLPHIN_DIR}:/dolphin
       - ./out/debian-nodeps-gcc-cross:/out
       - ./ccache.conf:/etc/ccache.conf
-      - /tmp/ccache-dolphin:/ccache
+      - ${CCACHE_DIR}:/ccache
 
   debian-nodeps-clang-cross:
     build:
@@ -170,7 +170,7 @@ services:
       - ${DOLPHIN_DIR}:/dolphin
       - ./out/debian-nodeps-clang-cross:/out
       - ./ccache.conf:/etc/ccache.conf
-      - /tmp/ccache-dolphin:/ccache
+      - ${CCACHE_DIR}:/ccache
 
   debian-alldeps-clang-cross:
     build:
@@ -184,7 +184,7 @@ services:
       - ${DOLPHIN_DIR}:/dolphin
       - ./out/debian-alldeps-clang-cross:/out
       - ./ccache.conf:/etc/ccache.conf
-      - /tmp/ccache-dolphin:/ccache
+      - ${CCACHE_DIR}:/ccache
 
   fedora-alldeps-gcc:
     build:
@@ -197,7 +197,7 @@ services:
       - ${DOLPHIN_DIR}:/dolphin
       - ./out/fedora-alldeps-gcc:/out
       - ./ccache.conf:/etc/ccache.conf
-      - /tmp/ccache-dolphin:/ccache
+      - ${CCACHE_DIR}:/ccache
 
   fedora-nodeps-gcc:
     build:
@@ -210,7 +210,7 @@ services:
       - ${DOLPHIN_DIR}:/dolphin
       - ./out/fedora-nodeps-gcc:/out
       - ./ccache.conf:/etc/ccache.conf
-      - /tmp/ccache-dolphin:/ccache
+      - ${CCACHE_DIR}:/ccache
 
   fedora-alldeps-clang:
     build:
@@ -223,7 +223,7 @@ services:
       - ${DOLPHIN_DIR}:/dolphin
       - ./out/fedora-alldeps-clang:/out
       - ./ccache.conf:/etc/ccache.conf
-      - /tmp/ccache-dolphin:/ccache
+      - ${CCACHE_DIR}:/ccache
 
   fedora-nodeps-clang:
     build:
@@ -236,7 +236,7 @@ services:
       - ${DOLPHIN_DIR}:/dolphin
       - ./out/fedora-nodeps-clang:/out
       - ./ccache.conf:/etc/ccache.conf
-      - /tmp/ccache-dolphin:/ccache
+      - ${CCACHE_DIR}:/ccache
 
   arch-alldeps-gcc:
     build:
@@ -249,7 +249,7 @@ services:
       - ${DOLPHIN_DIR}:/dolphin
       - ./out/arch-alldeps-gcc:/out
       - ./ccache.conf:/etc/ccache.conf
-      - /tmp/ccache-dolphin:/ccache
+      - ${CCACHE_DIR}:/ccache
 
   arch-nodeps-gcc:
     build:
@@ -262,7 +262,7 @@ services:
       - ${DOLPHIN_DIR}:/dolphin
       - ./out/arch-nodeps-gcc:/out
       - ./ccache.conf:/etc/ccache.conf
-      - /tmp/ccache-dolphin:/ccache
+      - ${CCACHE_DIR}:/ccache
 
   arch-alldeps-clang:
     build:
@@ -275,7 +275,7 @@ services:
       - ${DOLPHIN_DIR}:/dolphin
       - ./out/arch-alldeps-clang:/out
       - ./ccache.conf:/etc/ccache.conf
-      - /tmp/ccache-dolphin:/ccache
+      - ${CCACHE_DIR}:/ccache
 
   arch-nodeps-clang:
     build:
@@ -288,7 +288,7 @@ services:
       - ${DOLPHIN_DIR}:/dolphin
       - ./out/arch-nodeps-clang:/out
       - ./ccache.conf:/etc/ccache.conf
-      - /tmp/ccache-dolphin:/ccache
+      - ${CCACHE_DIR}:/ccache
 
   ubuntu-alldeps-gcc:
     build:
@@ -301,7 +301,7 @@ services:
       - ${DOLPHIN_DIR}:/dolphin
       - ./out/ubuntu-alldeps-gcc:/out
       - ./ccache.conf:/etc/ccache.conf
-      - /tmp/ccache-dolphin:/ccache
+      - ${CCACHE_DIR}:/ccache
 
   ubuntu-nodeps-gcc:
     build:
@@ -314,7 +314,7 @@ services:
       - ${DOLPHIN_DIR}:/dolphin
       - ./out/ubuntu-nodeps-gcc:/out
       - ./ccache.conf:/etc/ccache.conf
-      - /tmp/ccache-dolphin:/ccache
+      - ${CCACHE_DIR}:/ccache
 
   ubuntu-alldeps-clang:
     build:
@@ -327,7 +327,7 @@ services:
       - ${DOLPHIN_DIR}:/dolphin
       - ./out/ubuntu-alldeps-clang:/out
       - ./ccache.conf:/etc/ccache.conf
-      - /tmp/ccache-dolphin:/ccache
+      - ${CCACHE_DIR}:/ccache
 
   ubuntu-nodeps-clang:
     build:
@@ -340,4 +340,4 @@ services:
       - ${DOLPHIN_DIR}:/dolphin
       - ./out/ubuntu-nodeps-clang:/out
       - ./ccache.conf:/etc/ccache.conf
-      - /tmp/ccache-dolphin:/ccache
+      - ${CCACHE_DIR}:/ccache
