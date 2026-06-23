@@ -1,0 +1,317 @@
+services:
+  alpine-nodeps-gcc:
+    build:
+      context: .
+      dockerfile: alpine.Dockerfile
+      target: alpine-nodeps-gcc
+    container_name: alpine-nodeps-gcc
+    volumes:
+      - ${DOLPHIN_DIR}:/dolphin
+      - ./out/alpine-nodeps-gcc:/out
+      - ./ccache.conf:/etc/ccache.conf
+      - /tmp/ccache-dolphin:/ccache
+
+  alpine-nodeps-clang:
+    build:
+      context: .
+      dockerfile: alpine.Dockerfile
+      target: alpine-nodeps-clang
+    container_name: alpine-nodeps-clang
+    volumes:
+      - ${DOLPHIN_DIR}:/dolphin
+      - ./out/alpine-nodeps-clang:/out
+      - ./ccache.conf:/etc/ccache.conf
+      - /tmp/ccache-dolphin:/ccache
+
+  alpine-alldeps-gcc:
+    build:
+      context: .
+      dockerfile: alpine.Dockerfile
+      target: alpine-alldeps-gcc
+    container_name: alpine-alldeps-gcc
+    volumes:
+      - ${DOLPHIN_DIR}:/dolphin
+      - ./out/alpine-alldeps-gcc:/out
+      - ./ccache.conf:/etc/ccache.conf
+      - /tmp/ccache-dolphin:/ccache
+
+  alpine-alldeps-clang:
+    build:
+      context: .
+      dockerfile: alpine.Dockerfile
+      target: alpine-alldeps-clang
+    container_name: alpine-alldeps-clang
+    volumes:
+      - ${DOLPHIN_DIR}:/dolphin
+      - ./out/alpine-alldeps-clang:/out
+      - ./ccache.conf:/etc/ccache.conf
+      - /tmp/ccache-dolphin:/ccache
+
+  debian-alldeps-gcc:
+    build:
+      context: .
+      dockerfile: debian.Dockerfile
+      target: debian-alldeps-gcc
+    container_name: debian-alldeps-gcc
+    volumes:
+      - ${DOLPHIN_DIR}:/dolphin
+      - ./out/debian-alldeps-gcc:/out
+      - ./ccache.conf:/etc/ccache.conf
+      - /tmp/ccache-dolphin:/ccache
+
+  debian-nodeps-gcc:
+    build:
+      context: .
+      dockerfile: debian.Dockerfile
+      target: debian-nodeps-gcc
+    container_name: debian-nodeps-gcc
+    volumes:
+      - ${DOLPHIN_DIR}:/dolphin
+      - ./out/debian-nodeps-gcc:/out
+      - ./ccache.conf:/etc/ccache.conf
+      - /tmp/ccache-dolphin:/ccache
+
+  debian-alldeps-clang:
+    build:
+      context: .
+      dockerfile: debian.Dockerfile
+      target: debian-alldeps-clang
+    container_name: debian-alldeps-clang
+    volumes:
+      - ${DOLPHIN_DIR}:/dolphin
+      - ./out/debian-alldeps-clang:/out
+      - ./ccache.conf:/etc/ccache.conf
+      - /tmp/ccache-dolphin:/ccache
+
+  debian-nodeps-clang:
+    build:
+      context: .
+      dockerfile: debian.Dockerfile
+      target: debian-nodeps-clang
+    container_name: debian-nodeps-clang
+    volumes:
+      - ${DOLPHIN_DIR}:/dolphin
+      - ./out/debian-nodeps-clang:/out
+      - ./ccache.conf:/etc/ccache.conf
+      - /tmp/ccache-dolphin:/ccache
+
+  debian-alldeps-gcc-cross:
+    build:
+      context: .
+      dockerfile: debian.Dockerfile
+      target: debian-alldeps-gcc-cross
+    container_name: debian-alldeps-gcc-cross
+    privileged: true # Required for qemu to function properly
+    volumes:
+      - ${DOLPHIN_DIR}:/dolphin
+      - ./out/debian-alldeps-gcc-cross:/out
+      - ./ccache.conf:/etc/ccache.conf
+      - /tmp/ccache-dolphin:/ccache
+
+  debian-alldeps-gcc-cross-old:
+    build:
+      context: .
+      dockerfile: debian.Dockerfile
+      target: debian-alldeps-gcc-cross-old
+    container_name: debian-alldeps-gcc-cross-old
+    privileged: true # Required for qemu to function properly
+    volumes:
+      - ${DOLPHIN_DIR}:/dolphin
+      - ./out/debian-alldeps-gcc-cross-old:/out
+      - ./ccache.conf:/etc/ccache.conf
+      - /tmp/ccache-dolphin:/ccache
+  debian-nodeps-gcc-cross-old:
+    build:
+      context: .
+      dockerfile: debian.Dockerfile
+      target: debian-nodeps-gcc-cross-old
+    container_name: debian-nodeps-gcc-cross-old
+    privileged: true # Required for qemu to function properly
+    volumes:
+      - ${DOLPHIN_DIR}:/dolphin
+      - ./out/debian-nodeps-gcc-cross-old:/out
+      - ./ccache.conf:/etc/ccache.conf
+      - /tmp/ccache-dolphin:/ccache
+
+  debian-nodeps-gcc-cross:
+    build:
+      context: .
+      dockerfile: debian.Dockerfile
+      target: debian-nodeps-gcc-cross
+    container_name: debian-nodeps-gcc-cross
+    privileged: true # Required for qemu to function properly
+    volumes:
+      - ${DOLPHIN_DIR}:/dolphin
+      - ./out/debian-nodeps-gcc-cross:/out
+      - ./ccache.conf:/etc/ccache.conf
+      - /tmp/ccache-dolphin:/ccache
+
+  debian-nodeps-clang-cross:
+    build:
+      context: .
+      dockerfile: debian.Dockerfile
+      target: debian-nodeps-clang-cross
+    container_name: debian-nodeps-clang-cross
+    privileged: true # Required for qemu to function properly
+    volumes:
+      - ${DOLPHIN_DIR}:/dolphin
+      - ./out/debian-nodeps-clang-cross:/out
+      - ./ccache.conf:/etc/ccache.conf
+      - /tmp/ccache-dolphin:/ccache
+
+  debian-alldeps-clang-cross:
+    build:
+      context: .
+      dockerfile: debian.Dockerfile
+      target: debian-alldeps-clang-cross
+    container_name: debian-alldeps-clang-cross
+    privileged: true
+    volumes:
+      - ${DOLPHIN_DIR}:/dolphin
+      - ./out/debian-alldeps-clang-cross:/out
+      - ./ccache.conf:/etc/ccache.conf
+      - /tmp/ccache-dolphin:/ccache
+
+  fedora-alldeps-gcc:
+    build:
+      context: .
+      dockerfile: fedora.Dockerfile
+      target: fedora-alldeps-gcc
+    container_name: fedora-alldeps-gcc
+    volumes:
+      - ${DOLPHIN_DIR}:/dolphin
+      - ./out/fedora-alldeps-gcc:/out
+      - ./ccache.conf:/etc/ccache.conf
+      - /tmp/ccache-dolphin:/ccache
+
+  fedora-nodeps-gcc:
+    build:
+      context: .
+      dockerfile: fedora.Dockerfile
+      target: fedora-nodeps-gcc
+    container_name: fedora-nodeps-gcc
+    volumes:
+      - ${DOLPHIN_DIR}:/dolphin
+      - ./out/fedora-nodeps-gcc:/out
+      - ./ccache.conf:/etc/ccache.conf
+      - /tmp/ccache-dolphin:/ccache
+
+  fedora-alldeps-clang:
+    build:
+      context: .
+      dockerfile: fedora.Dockerfile
+      target: fedora-alldeps-clang
+    container_name: fedora-alldeps-clang
+    volumes:
+      - ${DOLPHIN_DIR}:/dolphin
+      - ./out/fedora-alldeps-clang:/out
+      - ./ccache.conf:/etc/ccache.conf
+      - /tmp/ccache-dolphin:/ccache
+
+  fedora-nodeps-clang:
+    build:
+      context: .
+      dockerfile: fedora.Dockerfile
+      target: fedora-nodeps-clang
+    container_name: fedora-nodeps-clang
+    volumes:
+      - ${DOLPHIN_DIR}:/dolphin
+      - ./out/fedora-nodeps-clang:/out
+      - ./ccache.conf:/etc/ccache.conf
+      - /tmp/ccache-dolphin:/ccache
+
+  arch-alldeps-gcc:
+    build:
+      context: .
+      dockerfile: arch.Dockerfile
+      target: arch-alldeps-gcc
+    container_name: arch-alldeps-gcc
+    volumes:
+      - ${DOLPHIN_DIR}:/dolphin
+      - ./out/arch-alldeps-gcc:/out
+      - ./ccache.conf:/etc/ccache.conf
+      - /tmp/ccache-dolphin:/ccache
+
+  arch-nodeps-gcc:
+    build:
+      context: .
+      dockerfile: arch.Dockerfile
+      target: arch-nodeps-gcc
+    container_name: arch-nodeps-gcc
+    volumes:
+      - ${DOLPHIN_DIR}:/dolphin
+      - ./out/arch-nodeps-gcc:/out
+      - ./ccache.conf:/etc/ccache.conf
+      - /tmp/ccache-dolphin:/ccache
+
+  arch-alldeps-clang:
+    build:
+      context: .
+      dockerfile: arch.Dockerfile
+      target: arch-alldeps-clang
+    container_name: arch-alldeps-clang
+    volumes:
+      - ${DOLPHIN_DIR}:/dolphin
+      - ./out/arch-alldeps-clang:/out
+      - ./ccache.conf:/etc/ccache.conf
+      - /tmp/ccache-dolphin:/ccache
+
+  arch-nodeps-clang:
+    build:
+      context: .
+      dockerfile: arch.Dockerfile
+      target: arch-nodeps-clang
+    container_name: arch-nodeps-clang
+    volumes:
+      - ${DOLPHIN_DIR}:/dolphin
+      - ./out/arch-nodeps-clang:/out
+      - ./ccache.conf:/etc/ccache.conf
+      - /tmp/ccache-dolphin:/ccache
+
+  ubuntu-alldeps-gcc:
+    build:
+      context: .
+      dockerfile: ubuntu.Dockerfile
+      target: ubuntu-alldeps-gcc
+    container_name: ubuntu-alldeps-gcc
+    volumes:
+      - ${DOLPHIN_DIR}:/dolphin
+      - ./out/ubuntu-alldeps-gcc:/out
+      - ./ccache.conf:/etc/ccache.conf
+      - /tmp/ccache-dolphin:/ccache
+
+  ubuntu-nodeps-gcc:
+    build:
+      context: .
+      dockerfile: ubuntu.Dockerfile
+      target: ubuntu-nodeps-gcc
+    container_name: ubuntu-nodeps-gcc
+    volumes:
+      - ${DOLPHIN_DIR}:/dolphin
+      - ./out/ubuntu-nodeps-gcc:/out
+      - ./ccache.conf:/etc/ccache.conf
+      - /tmp/ccache-dolphin:/ccache
+
+  ubuntu-alldeps-clang:
+    build:
+      context: .
+      dockerfile: ubuntu.Dockerfile
+      target: ubuntu-alldeps-clang
+    container_name: ubuntu-alldeps-clang
+    volumes:
+      - ${DOLPHIN_DIR}:/dolphin
+      - ./out/ubuntu-alldeps-clang:/out
+      - ./ccache.conf:/etc/ccache.conf
+      - /tmp/ccache-dolphin:/ccache
+
+  ubuntu-nodeps-clang:
+    build:
+      context: .
+      dockerfile: ubuntu.Dockerfile
+      target: ubuntu-nodeps-clang
+    container_name: ubuntu-nodeps-clang
+    volumes:
+      - ${DOLPHIN_DIR}:/dolphin
+      - ./out/ubuntu-nodeps-clang:/out
+      - ./ccache.conf:/etc/ccache.conf
+      - /tmp/ccache-dolphin:/ccache
