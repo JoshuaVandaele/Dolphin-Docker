@@ -22,4 +22,4 @@ class LLD(GenericPackage):
 
     @staticmethod
     def alpine() -> str:
-        return "lld"
+        return "lld gcc"  # gcc is required for linking for some confusing reason

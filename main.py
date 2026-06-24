@@ -56,7 +56,11 @@ def load_distros() -> list[GenericDistro]:
             **packages,
             "required": [p for p in packages["required"] if p.NAME not in quirks],
             "optional": [p for p in packages["optional"] if p.NAME not in quirks],
-            "quirks": [p for p in packages["optional"] if p.NAME in quirks],
+            "quirks": [
+                p
+                for p in packages["required"] + packages["optional"]
+                if p.NAME in quirks
+            ],
         }
         results.append(distro(**distro_packages))
     return results

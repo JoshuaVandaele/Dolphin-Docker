@@ -31,9 +31,7 @@ class Dockerfile:
             self._install_stages(["clang"])
             + "ENV CC=clang\n"
             + "ENV CXX=clang++\n"
-            + 'ENV CFLAGS="-rtlib=compiler-rt"\n'
-            + 'ENV CXXFLAGS="-stdlib=libc++ -rtlib=compiler-rt"\n'
-            + 'ENV LDFLAGS="-stdlib=libc++ -fuse-ld=lld -rtlib=compiler-rt"\n'
+            + 'ENV LDFLAGS="-fuse-ld=lld"\n'
         )
 
     @staticmethod
