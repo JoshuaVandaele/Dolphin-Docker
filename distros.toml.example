@@ -1,0 +1,69 @@
+base = ["Bash", "Git", "CMake", "Ninja", "Ccache", "Linux headers"]
+required = [
+    "{fmt}",
+    "glslang",
+    "pugixml",
+    "ENet",
+    "xxHash",
+    "bzip2",
+    "libLZMA",
+    "Zstandard",
+    "zlib",
+    "minizip-ng",
+    "LZO",
+    "LZ4",
+    "spng",
+    "libusb",
+    "libcurl",
+    "HIDAPI",
+]
+optional = [
+    "Qt 6",
+    "OpenGL",
+    "X11",
+    "PkgConfig",
+    "EGL",
+    "FFmpeg",
+    "libudev",
+    "libevdev",
+    "SDL",
+    "libcubeb",
+    "SFML",
+    "miniupnpc",
+    "MbedTLS 2",
+    "iconv",
+    "libmGBA",
+    "systemd",
+    "GoogleTest",
+    "ALSA",
+    "PulseAudio",
+    "LLVM",
+    "BlueZ",
+    "gettext",
+]
+gcc = ["G++", "ld"]
+clang = ["Clang++", "LLD", "compiler-rt", "LLVM archiver", "libc++", "libunwind"]
+
+[env]
+DOLPHIN_DIR = "/src/dolphin/"
+CCACHE_DIR = "/tmp/ccache/"
+
+[alpine]
+package_manager = "apk"
+quirks = ["SFML", "libmGBA", "libcubeb", "LLVM", "systemd"]
+
+[arch]
+package_manager = "pacman"
+quirks = ["libmGBA", "libcubeb"]
+
+[fedora]
+package_manager = "dnf"
+quirks = ["SFML", "MbedTLS 2", "libmGBA"]
+
+[debian]
+package_manager = "apt"
+quirks = ["minizip-ng", "SFML", "MbedTLS 2", "libmGBA"]
+
+[ubuntu]
+package_manager = "apt"
+quirks = ["MbedTLS 2", "libmGBA"]
