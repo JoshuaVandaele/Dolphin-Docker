@@ -6,11 +6,11 @@ class LibSTDCPlusPlus(GenericPackage):
 
     @staticmethod
     def debian() -> str:
-        return "g++"  # libstdc++-dev fails because it's a "virtual package" or whatever nonsense
+        return "g++"  # libstdc++-dev fails because it's a "virtual package" or whatever nonsense, but g++ pulls in the required files
 
     @staticmethod
     def ubuntu() -> str:
-        return "libstdc++-dev"
+        return "g++"  # same as debian
 
     @staticmethod
     def fedora() -> str:
