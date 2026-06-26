@@ -27,3 +27,7 @@ class LibUSB(GenericOptionalPackage):
     @staticmethod
     def alpine() -> str:
         return "libusb-dev"
+
+    @staticmethod
+    def gentoo() -> str:
+        return "virtual/libusb"

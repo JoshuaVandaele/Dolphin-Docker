@@ -27,3 +27,7 @@ class XxHash(GenericOptionalPackage):
     @staticmethod
     def alpine() -> str:
         return "xxhash-dev"
+
+    @staticmethod
+    def gentoo() -> str:
+        return "dev-libs/xxhash"

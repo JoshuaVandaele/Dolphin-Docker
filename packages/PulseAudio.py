@@ -27,3 +27,7 @@ class PulseAudio(GenericOptionalPackage):
     @staticmethod
     def alpine() -> str:
         return "pulseaudio-dev"
+
+    @staticmethod
+    def gentoo() -> str:
+        return "media-libs/libpulse"

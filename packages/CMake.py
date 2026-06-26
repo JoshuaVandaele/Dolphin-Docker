@@ -23,3 +23,7 @@ class CMake(GenericPackage):
     @staticmethod
     def alpine() -> str:
         return "cmake"
+
+    @staticmethod
+    def gentoo() -> str:
+        return "dev-build/cmake"

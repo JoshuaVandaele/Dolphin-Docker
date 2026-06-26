@@ -27,3 +27,7 @@ class LZO(GenericOptionalPackage):
     @staticmethod
     def alpine() -> str:
         return "lzo-dev"
+
+    @staticmethod
+    def gentoo() -> str:
+        return "dev-libs/lzo"

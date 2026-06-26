@@ -27,3 +27,7 @@ class ENet(GenericOptionalPackage):
     @staticmethod
     def alpine() -> str:
         return "enet-dev"
+
+    @staticmethod
+    def gentoo() -> str:
+        return "net-libs/enet"

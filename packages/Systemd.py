@@ -29,3 +29,7 @@ class Systemd(GenericOptionalPackage):
     def alpine() -> str:
         # Alpine doesn't use sytemd
         raise NotImplementedError("Not in the repository.")
+
+    @staticmethod
+    def gentoo() -> str:
+        return "sys-apps/systemd-utils"

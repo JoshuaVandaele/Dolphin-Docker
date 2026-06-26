@@ -27,3 +27,7 @@ class SFML(GenericOptionalPackage):
     @staticmethod
     def alpine() -> str:
         return "sfml-dev"
+
+    @staticmethod
+    def gentoo() -> str:
+        return "media-libs/libsfml"

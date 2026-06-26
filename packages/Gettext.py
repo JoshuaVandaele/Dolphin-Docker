@@ -28,3 +28,7 @@ class Gettext(GenericOptionalPackage):
     @staticmethod
     def alpine() -> str:
         return "gettext"
+
+    @staticmethod
+    def gentoo() -> str:
+        return "sys-devel/gettext"

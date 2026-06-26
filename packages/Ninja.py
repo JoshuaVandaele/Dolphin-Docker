@@ -23,3 +23,7 @@ class Ninja(GenericPackage):
     @staticmethod
     def alpine() -> str:
         return "ninja"
+
+    @staticmethod
+    def gentoo() -> str:
+        return "app-alternatives/ninja"

@@ -27,3 +27,7 @@ class Miniupnpc(GenericOptionalPackage):
     @staticmethod
     def alpine() -> str:
         return "miniupnpc-dev"
+
+    @staticmethod
+    def gentoo() -> str:
+        return "net-libs/miniupnpc"

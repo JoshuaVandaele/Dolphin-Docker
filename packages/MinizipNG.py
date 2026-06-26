@@ -27,3 +27,7 @@ class MinizipNG(GenericOptionalPackage):
     @staticmethod
     def alpine() -> str:
         return "minizip-ng-dev"
+
+    @staticmethod
+    def gentoo() -> str:
+        return "sys-libs/minizip-ng"

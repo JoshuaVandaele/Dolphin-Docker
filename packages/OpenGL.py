@@ -28,3 +28,7 @@ class OpenGL(GenericOptionalPackage):
     @staticmethod
     def alpine() -> str:
         return "glfw-dev"
+
+    @staticmethod
+    def gentoo() -> str:
+        return "virtual/opengl"

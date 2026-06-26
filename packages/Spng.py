@@ -27,3 +27,7 @@ class Spng(GenericOptionalPackage):
     @staticmethod
     def alpine() -> str:
         return "libspng-dev"
+
+    @staticmethod
+    def gentoo() -> str:
+        return "media-libs/libspng"

@@ -27,3 +27,7 @@ class Zlib(GenericOptionalPackage):
     @staticmethod
     def alpine() -> str:
         return "zlib-dev"
+
+    @staticmethod
+    def gentoo() -> str:
+        return "virtual/zlib"

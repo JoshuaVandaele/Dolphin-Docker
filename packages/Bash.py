@@ -23,3 +23,7 @@ class Bash(GenericPackage):
     @staticmethod
     def alpine() -> str:
         return "bash"
+
+    @staticmethod
+    def gentoo() -> str:
+        return "app-shells/bash"

@@ -27,3 +27,7 @@ class Glslang(GenericOptionalPackage):
     @staticmethod
     def alpine() -> str:
         return "glslang-dev spirv-tools-dev"
+
+    @staticmethod
+    def gentoo() -> str:
+        return "dev-util/glslang"

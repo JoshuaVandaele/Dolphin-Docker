@@ -27,3 +27,7 @@ class EGL(GenericOptionalPackage):
     @staticmethod
     def alpine() -> str:
         return "mesa-egl"
+
+    @staticmethod
+    def gentoo() -> str:
+        return "media-libs/libglvnd"

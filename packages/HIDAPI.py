@@ -27,3 +27,7 @@ class HIDAPI(GenericOptionalPackage):
     @staticmethod
     def alpine() -> str:
         return "hidapi-dev"
+
+    @staticmethod
+    def gentoo() -> str:
+        return "dev-libs/hidapi"

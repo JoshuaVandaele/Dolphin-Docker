@@ -23,3 +23,7 @@ class ClangPlusPlus(GenericPackage):
     @staticmethod
     def alpine() -> str:
         return "clang"
+
+    @staticmethod
+    def gentoo() -> str:
+        return "llvm-core/clang"

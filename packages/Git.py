@@ -23,3 +23,7 @@ class Git(GenericPackage):
     @staticmethod
     def alpine() -> str:
         return "git"
+
+    @staticmethod
+    def gentoo() -> str:
+        return "dev-vcs/git"

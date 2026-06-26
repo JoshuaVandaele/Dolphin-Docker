@@ -27,3 +27,7 @@ class GTest(GenericOptionalPackage):
     @staticmethod
     def alpine() -> str:
         return "gtest-dev"
+
+    @staticmethod
+    def gentoo() -> str:
+        return "dev-cpp/gtest"

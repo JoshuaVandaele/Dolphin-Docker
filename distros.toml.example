@@ -62,3 +62,6 @@ quirks = ["minizip-ng", "SFML", "MbedTLS 2", "libmGBA"]
 
 [ubuntu]
 quirks = ["MbedTLS 2", "libmGBA"]
+
+[gentoo]
+quirks = ["libmGBA"]

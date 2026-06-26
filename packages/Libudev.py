@@ -27,3 +27,7 @@ class Libudev(GenericOptionalPackage):
     @staticmethod
     def alpine() -> str:
         return "eudev-dev"
+
+    @staticmethod
+    def gentoo() -> str:
+        return "virtual/libudev"

@@ -27,3 +27,7 @@ class Qt6(GenericOptionalPackage):
     @staticmethod
     def alpine() -> str:
         return "qt6-qtbase-dev qt6-qtbase-private-dev qt6-qtsvg-dev"
+
+    @staticmethod
+    def gentoo() -> str:
+        return "dev-qt/qtbase dev-qt/qtsvg"

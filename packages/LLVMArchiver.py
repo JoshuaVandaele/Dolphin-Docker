@@ -23,3 +23,7 @@ class LLVMArchiver(GenericPackage):
     @staticmethod
     def alpine() -> str:
         return "llvm"
+
+    @staticmethod
+    def gentoo() -> str:
+        return "llvm-core/llvm"

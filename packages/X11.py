@@ -27,3 +27,7 @@ class X11(GenericOptionalPackage):
     @staticmethod
     def alpine() -> str:
         return "libx11-dev libxrandr-dev libxi-dev"
+
+    @staticmethod
+    def gentoo() -> str:
+        return "x11-libs/libX11 x11-libs/libXi x11-libs/libXrandr"

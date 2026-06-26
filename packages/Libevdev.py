@@ -27,3 +27,7 @@ class Libevdev(GenericOptionalPackage):
     @staticmethod
     def alpine() -> str:
         return "libevdev-dev"
+
+    @staticmethod
+    def gentoo() -> str:
+        return "dev-libs/libevdev"

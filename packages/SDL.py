@@ -27,3 +27,7 @@ class SDL(GenericOptionalPackage):
     @staticmethod
     def alpine() -> str:
         return "sdl3-dev"
+
+    @staticmethod
+    def gentoo() -> str:
+        return "media-libs/libsdl3"

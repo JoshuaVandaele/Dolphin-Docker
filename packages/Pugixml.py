@@ -27,3 +27,7 @@ class Pugixml(GenericOptionalPackage):
     @staticmethod
     def alpine() -> str:
         return "pugixml-dev"
+
+    @staticmethod
+    def gentoo() -> str:
+        return "dev-libs/pugixml"

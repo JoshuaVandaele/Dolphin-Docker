@@ -31,3 +31,8 @@ class Iconv(GenericOptionalPackage):
     def alpine() -> str:
         # Built-in
         return ""
+
+    @staticmethod
+    def gentoo() -> str:
+        # Built-in
+        return ""

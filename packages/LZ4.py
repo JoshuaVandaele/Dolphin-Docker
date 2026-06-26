@@ -27,3 +27,7 @@ class LZ4(GenericOptionalPackage):
     @staticmethod
     def alpine() -> str:
         return "lz4-dev"
+
+    @staticmethod
+    def gentoo() -> str:
+        return "app-arch/lz4"

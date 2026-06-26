@@ -27,3 +27,7 @@ class Cubeb(GenericOptionalPackage):
     @staticmethod
     def alpine() -> str:
         raise NotImplementedError("Not in the repository.")
+
+    @staticmethod
+    def gentoo() -> str:
+        return "media-libs/cubeb"

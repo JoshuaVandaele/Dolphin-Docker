@@ -27,3 +27,7 @@ class ALSA(GenericOptionalPackage):
     @staticmethod
     def alpine() -> str:
         return "alsa-lib-dev"
+
+    @staticmethod
+    def gentoo() -> str:
+        return "media-libs/alsa-lib"

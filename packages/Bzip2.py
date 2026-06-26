@@ -27,3 +27,7 @@ class Bzip2(GenericOptionalPackage):
     @staticmethod
     def alpine() -> str:
         return "bzip2-dev"
+
+    @staticmethod
+    def gentoo() -> str:
+        return "app-arch/bzip2"

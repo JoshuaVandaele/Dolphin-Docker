@@ -27,3 +27,7 @@ class LLVM(GenericOptionalPackage):
     @staticmethod
     def alpine() -> str:
         return "llvm-dev"
+
+    @staticmethod
+    def gentoo() -> str:
+        return "llvm-core/llvm"

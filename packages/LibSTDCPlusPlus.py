@@ -23,3 +23,7 @@ class LibSTDCPlusPlus(GenericPackage):
     @staticmethod
     def alpine() -> str:
         return "libstdc++-dev"
+
+    @staticmethod
+    def gentoo() -> str:
+        return "sys-devel/gcc"  # Part of GCC, no individual package

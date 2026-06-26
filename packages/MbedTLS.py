@@ -27,3 +27,7 @@ class MbedTLS(GenericOptionalPackage):
     @staticmethod
     def alpine() -> str:
         return "mbedtls2-dev"
+
+    @staticmethod
+    def gentoo() -> str:
+        return "net-libs/mbedtls:0"

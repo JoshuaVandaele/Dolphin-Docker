@@ -23,3 +23,7 @@ class Ld(GenericPackage):
     @staticmethod
     def alpine() -> str:
         return "binutils"
+
+    @staticmethod
+    def gentoo() -> str:
+        return "sys-devel/binutils"

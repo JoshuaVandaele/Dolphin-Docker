@@ -23,3 +23,7 @@ class GPlusPlus(GenericPackage):
     @staticmethod
     def alpine() -> str:
         return "g++"
+
+    @staticmethod
+    def gentoo() -> str:
+        return "sys-devel/gcc"

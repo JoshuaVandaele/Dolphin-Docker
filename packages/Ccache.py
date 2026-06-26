@@ -23,3 +23,7 @@ class Ccache(GenericPackage):
     @staticmethod
     def alpine() -> str:
         return "ccache"
+
+    @staticmethod
+    def gentoo() -> str:
+        return "dev-util/ccache"

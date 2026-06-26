@@ -27,3 +27,7 @@ class LZMA(GenericOptionalPackage):
     @staticmethod
     def alpine() -> str:
         return "xz-dev"
+
+    @staticmethod
+    def gentoo() -> str:
+        return "app-arch/xz-utils"

@@ -28,3 +28,7 @@ class PkgConfig(GenericOptionalPackage):
     @staticmethod
     def alpine() -> str:
         return "pkgconf"
+
+    @staticmethod
+    def gentoo() -> str:
+        return "virtual/pkgconfig"

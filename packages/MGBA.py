@@ -27,3 +27,7 @@ class MGBA(GenericOptionalPackage):
     @staticmethod
     def alpine() -> str:
         return "libmgba-dev"
+
+    @staticmethod
+    def gentoo() -> str:
+        return "games-emulation/mgba"

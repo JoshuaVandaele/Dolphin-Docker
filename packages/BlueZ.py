@@ -27,3 +27,7 @@ class BlueZ(GenericOptionalPackage):
     @staticmethod
     def alpine() -> str:
         return "bluez-dev"
+
+    @staticmethod
+    def gentoo() -> str:
+        return "net-wireless/bluez"

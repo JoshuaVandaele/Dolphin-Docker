@@ -27,3 +27,7 @@ class LibCurl(GenericOptionalPackage):
     @staticmethod
     def alpine() -> str:
         return "curl-dev"
+
+    @staticmethod
+    def gentoo() -> str:
+        return "net-misc/curl"

@@ -23,3 +23,7 @@ class GenericPackage(ABC):
     @staticmethod
     @abstractmethod
     def alpine() -> str: ...
+
+    @staticmethod
+    @abstractmethod
+    def gentoo() -> str: ...

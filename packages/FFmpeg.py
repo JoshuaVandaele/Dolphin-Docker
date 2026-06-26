@@ -27,3 +27,7 @@ class FFmpeg(GenericOptionalPackage):
     @staticmethod
     def alpine() -> str:
         return "ffmpeg-dev"
+
+    @staticmethod
+    def gentoo() -> str:
+        return "media-video/ffmpeg"

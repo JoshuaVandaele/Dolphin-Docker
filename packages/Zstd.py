@@ -27,3 +27,7 @@ class Zstd(GenericOptionalPackage):
     @staticmethod
     def alpine() -> str:
         return "zstd-dev"
+
+    @staticmethod
+    def gentoo() -> str:
+        return "app-arch/zstd"

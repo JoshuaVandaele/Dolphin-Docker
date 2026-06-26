@@ -23,3 +23,7 @@ class KernelHeaders(GenericPackage):
     @staticmethod
     def alpine() -> str:
         return "linux-headers"
+
+    @staticmethod
+    def gentoo() -> str:
+        return "sys-kernel/linux-headers"

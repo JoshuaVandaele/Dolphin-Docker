@@ -27,3 +27,7 @@ class Fmt(GenericOptionalPackage):
     @staticmethod
     def alpine() -> str:
         return "fmt-dev"
+
+    @staticmethod
+    def gentoo() -> str:
+        return "dev-libs/libfmt"
